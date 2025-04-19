@@ -1,58 +1,123 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Abyssal Secrets",
+    "Credits": "Created by The Zones",
+    "InitialLocation": "Entry Dock",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Entry Dock": {
+            "Body": "You stand at the Entry Dock of the deep-sea facility, the water lapping at your feet.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Enter the Central Hub",
+                    "Target": "Central Hub"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Central Hub": {
+            "Body": "The Central Hub is dark and quiet, with corridors leading in all directions.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "North to Crew Quarters",
+                    "Target": "Crew Quarters"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "East to Medical Bay",
+                    "Target": "Medical Bay"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "South to Observation Room",
+                    "Target": "Observation Room"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "West to Storage Room",
+                    "Target": "Storage Room"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Crew Quarters": {
+            "Body": "You find an old crew diary. It speaks of their daily duties... and one chilling entry: \"We found a relic buried under the sea. It shimmered like gold. But since that day, we\u2019ve not been the same...\"",
+            "Choices": [
+                {
+                    "Text": "Back to Central Hub",
+                    "Target": "Central Hub"
+                }
+            ]
+        },
+        "Medical Bay": {
+            "Body": "Scattered notes and voice memos describe symptoms: hallucinations, fever, violence. A log entry reads, \"Since we uncovered that thing, we've fallen ill. It\u2019s killing us one by one.\"",
+            "Choices": [
+                {
+                    "Text": "Back to Central Hub",
+                    "Target": "Central Hub"
+                }
+            ]
+        },
+        "Observation Room": {
+            "Body": "You peer through reinforced glass. In a corner, something glints. You find a small brass object: the Safe Key.",
+            "Choices": [
+                {
+                    "Text": "Take the Safe Key",
+                    "Target": "Observation Room (Key)"
+                },
+                {
+                    "Text": "Back to Central Hub",
+                    "Target": "Central Hub"
+                }
+            ]
+        },
+        "Observation Room (Key)": {
+            "Body": "You pick up the Safe Key. It feels warm, almost alive.",
+            "Choices": [
+                {
+                    "Text": "Back to Observation Room",
+                    "Target": "Observation Room"
+                },
+                {
+                    "Text": "Back to Central Hub",
+                    "Target": "Central Hub"
+                }
+            ],
+            "GivesItem": "Safe Key"
+        },
+        "Storage Room": {
+            "Body": "A massive safe stands against the wall, sealed tight. Without a key, it won\u2019t budge.",
+            "Choices": [
+                {
+                    "Text": "Try to open the safe",
+                    "Target": "Storage Room (Safe)",
+                    "RequiredItem": "Safe Key"
+                },
+                {
+                    "Text": "Back to Central Hub",
+                    "Target": "Central Hub"
+                }
+            ]
+        },
+        "Storage Room (Safe)": {
+            "Body": "With a click, the Safe Key opens the vault. Inside: a strange treasure chest pulsing softly.",
+            "Choices": [
+                {
+                    "Text": "Take the treasure",
+                    "Target": "Treasure Ending"
+                },
+                {
+                    "Text": "Back to Central Hub",
+                    "Target": "Central Hub"
+                }
+            ],
+            "GivesItem": "Treasure"
+        },
+        "Treasure Ending": {
+            "Body": "You take the treasure. As you leave, you feel a scratch in your throat. The ancient plague within has awakened.",
+            "Choices": [
+                {
+                    "Text": "Escape with the treasure",
+                    "Target": "Final Chamber"
+                }
+            ]
+        },
+        "Final Chamber": {
+            "Body": "The submarine breaches the surface. In your hands, the treasure pulses. Behind you, the deep sea slumbers again... but the plague now spreads on land.",
+            "Choices": []
         }
     }
 }
